@@ -1,0 +1,82 @@
+.book-create {
+    width: 60%;
+    &__content {
+        background: #fff;
+        border-radius: 5px;
+    }
+    h2 {
+        border-bottom: 1px solid rgba(34,36,38,.15);
+        text-align: center;
+        margin: 0;
+    }
+    
+    &_modal-wrapper {
+        background: rgba($color: #a09191, $alpha: 0.5);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 10000;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_field {
+         display: flex;
+         flex-direction: column;
+         margin-bottom: 15px;
+         position: relative;
+     }
+ 
+     &_field label{
+         font-weight: 550;
+         margin-bottom: 5px;
+     }
+ 
+     &_btn-black{
+         background-color: #45403c;
+         color: #fff;
+         padding: 10px 20px;
+         border: 1px solid #45403c;
+         border-radius: 4px;
+         outline: none;
+         cursor: pointer;
+         margin-top: 10px;
+     }
+     
+     &_btn-black:hover{
+         background-color: #36312e;
+     }
+ 
+     &_form {
+         position: relative;
+         box-shadow: 0 1px 2px 0 rgba(34,36,38,.15);
+         padding: 16px;
+     }
+
+     &_input {
+         font-size: 14px;
+         outline: none;
+         padding: 8px 40px 8px 16px;
+         border: 1px solid rgba(34,36,38,.15);
+         color: rgba(0,0,0,.87);
+         border-radius: 5px;  
+     }
+     &_icon {
+         position: absolute;
+         right: 14px;
+         bottom: 10px;
+         color: grey;
+         cursor: pointer;
+     }
+     &_input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+         color: #b8b8b8;
+         opacity: 1; /* Firefox */
+     }
+ }

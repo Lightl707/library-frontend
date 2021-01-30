@@ -1,0 +1,80 @@
+.crud {
+
+&-book_buttons {
+  display: flex;
+}
+
+&_btn-green{
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    padding: 10px 18px;
+    background: #4caf50;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+
+  &_btn-red{
+    border: 1px solid #db2828;
+    border-radius: 4px;
+    padding: 10px 18px;
+    background: #db2828;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  &_btn-blue{
+    border: 1px solid rgb(33, 133, 208);
+    border-radius: 4px;
+    padding: 10px 18px;
+    background: rgb(33, 133, 208);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+
+  &_btn-blue:hover{
+    color:rgb(33, 133, 208);
+    background:#fff;
+}
+
+&_btn-green:hover{
+      color:#4caf50;
+      background:#fff;
+  }
+  &_btn-red:hover{
+    color:#db2828;
+    background:#fff;
+}
+
+&_icon {
+  margin-right: 8px;
+}
+
+}
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td, table th {
+    padding: 8px;
+  }
+  
+  table tr{background-color: #f2f2f2;}
+  
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  

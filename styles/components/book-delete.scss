@@ -1,0 +1,57 @@
+.book_delete {
+  width: 40%;
+  padding: 24px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+
+
+  h2 {
+    display: flex;
+    text-align: center;
+  }
+
+  &_icon {
+    margin-right: 8px;
+    }
+
+  p {
+    font-size: 16px;
+    color: grey;
+    margin-bottom: 16px;
+  }
+
+  &-yes {
+        border: 1px solid #4caf50;
+        border-radius: 4px;
+        padding: 10px 18px;
+        background: #4caf50;
+        color: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        margin-right: 2px;
+  }
+
+  &-yes :hover{
+    color:#4caf50;
+    background:#fff;
+}
+
+&-no {
+    border: 1px solid #db2828;
+    border-radius: 4px;
+    padding: 10px 18px;
+    background: #db2828;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left:16px ;
+}
+
+&-no:hover{
+    color:#db2828;
+    background:#fff;
+} 
+}

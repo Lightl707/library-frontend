@@ -1,0 +1,72 @@
+.profile-page {
+  display: flex;
+  &_block {
+    width: 30%;
+  }
+  &__books {
+    &__item {
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      margin-bottom: 16px;
+      &-name {
+        font-size: 20px;
+        margin-left: 8px;
+      }
+    }
+  }
+  &__user {
+    background: #f1f1f1;
+    padding: 14px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    &-name {
+      display: flex;
+      align-items: center;
+      img {
+        width: 80px;
+        border-radius: 50%;
+      }
+      p {
+        font-size: 20px;
+        font-weight: 600;
+        margin-left: 12px;
+      }
+    }
+    &-info {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(0,0,0,.4);
+      margin-top: 12px;
+    }
+    &-data {
+      font-size: 15px;
+      font-weight: 600;
+      color:rgba(0,0,0,.68);
+    }
+    &-img {
+      width: 120px;
+      height: auto;
+      border-radius:4px;  }
+  }
+  &__history {
+    &__item {
+      button {
+        font-size: 16px;  
+        align-self: center;
+        border: none;
+        padding: 12px 16px;
+        margin: 0;
+        background: none;
+        outline: 0;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background: rgba(0,0,0,.03);
+      color: rgba(0,0,0,.95);
+    }
+    }
+  }
+}
+  

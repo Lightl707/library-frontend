@@ -1,0 +1,142 @@
+.top-menu {
+  border-bottom: 3px solid #45403c;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header {
+  margin-top: 8px;
+
+  &_icon {
+    margin-left: 4px;
+  }
+
+  &_p {
+    margin-left: -12px;
+  }
+}
+
+.top-menu .item:before {
+  content: unset;
+}
+
+.top-menu .item:first-child {
+  border-right: 3px solid;
+}
+
+.top-menu .item {
+  background: #686461;
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 16px;
+  border: none;
+}
+
+.logo-block img {
+  width: 150px;
+  margin-right: 16px;
+}
+
+.profile img {
+  width: 40px;
+  margin-right: 16px;
+  border-radius: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &_text {
+    cursor: pointer;
+  }
+}
+
+.bot-menu {
+  margin: 0;
+  border-radius: 0;
+  box-shadow: 0 0 black;
+  border: none;
+  display: flex;
+}
+
+.bot-menu .column {
+  padding: 0;
+}
+
+.bot-menu .item:hover {
+  border: none;
+  background: #45403c;
+  color: #fff;
+  font-size: 18px;
+}
+
+.bot-menu .item {
+  color: #45403c;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+}
+
+.bot-menu .menu-items {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.bot-menu .item:before {
+  content: none;
+}
+
+.bot-menu {
+  border-bottom: 3px solid #45403c;
+  background-color: #ede6c7;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  outline: 0;
+  background: none;
+  align-self: center;
+  border: none;
+}
+
+.dropdown-content button:hover {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+    bottom: 0px;
+    left: -52px;
+}
+
+.profile:hover .dropdown-content {
+  display: block;
+}
+
+@media all and (max-width: 800px) {
+  .top-menu {
+    width: 10px;
+  }
+}

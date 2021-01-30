@@ -1,0 +1,39 @@
+.categories-block .column .label{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.categories-block .column i{
+    font-size: 42px;
+    margin-bottom:5px;
+}
+
+.categories-page .header{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .categories-page .list{
+    display: grid;
+    padding: 8px;
+  }
+
+  .categories-page .list a{
+      margin-top:4px;
+  }
+  
+  .categories-page{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .cat-name {
+    padding: 8px;
+  }
+
+  .categories-page > .item{
+    flex: 1 0 21%;
+    margin-bottom: 40px;
+  }

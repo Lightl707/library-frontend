@@ -1,0 +1,37 @@
+.footer{
+    border-top:1px solid rgba(34,36,38,.15);
+    background-color: #ede6c7;
+    display: flex;
+    align-content: space-around;
+    padding: 16px 0;
+
+
+}
+
+.block {
+    padding: 16px;
+    border-left: 1px solid rgba(34,36,38,.15);
+    width: 16%;
+}
+
+.block-header {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.block-list {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.block-list a {
+    color: rgba(0,0,0,.4);
+    font-size: 14px;
+    padding: 2px;
+}
+
+.block:first-child {
+    border: none;
+}

@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;500;700&display=swap);
+
+html, body{
+    background: #ede6c7;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+    max-width: 960px;
+    font-family: Piazzolla;
+}
+
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  font-family: Piazzolla;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Icons';
+  src: url("/fonts/icons.eot");
+  src: url("/fonts/icons.eot?#iefix") format('embedded-opentype'), url("/fonts/icons.woff2") format('woff2'), url("/fonts/icons.woff") format('woff'), url("/fonts/icons.ttf") format('truetype'), url("/fonts/icons.svg#icons") format('svg');
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: inherit;
+  text-transform: none;
+}
+
+.main-page{
+  background-color: #ede6c7;
+  display: flex;
+  margin-bottom:50px;
+  overflow: auto;
+}
+
+.layout-main {
+  display: flex;
+  justify-content: center;
+}
+
+.sub {
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: rgba(0,0,0,.6);
+}
+
+.main-page .card{
+  margin-right: 22px;
+}
+
+.main-header {
+  display: flex;
+  padding: 16px;
+}
+
+.cont {
+  margin-left: 14px;
+}
+
+.main-page img{
+  border-radius: 4px;
+  width: 140px;
+  height: 180px;
+}
+
+.content {
+  padding: 36px 0;
+}
+
+.categories-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+
+  &_label {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: Piazzolla,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    font-weight: 600;
+    color: rgba(0,0,0,.87);
+  }
+  
+  &_item {
+    text-align: center;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+@import "./components/footer.scss";
+@import "./components/header.scss";
+@import "./pages/sign.scss";
+@import "./pages/categories.scss";
+@import "./pages/popular.scss";
+@import "./pages/search.scss";
+@import "./pages/crud-all.scss";
+@import "./pages/profile.scss";
+@import "./pages/book.scss";
+@import "./components/book-delete.scss";
+@import "./components/book-create.scss";
+
+
+
+
+
+
+
