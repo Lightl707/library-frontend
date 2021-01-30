@@ -24,7 +24,7 @@ const Signin = ({ close }) => {
 
   return (
   <div className="modal-wrapper">
-    <div className="signin">
+    <div className="signin">/
       <div className="modal_close" onClick={close}>
         <img src="/close.svg" alt="" />
       </div>
