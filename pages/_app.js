@@ -15,7 +15,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <div class="layout">
+    <div className ="layout">
       <Header />
       <Component {...pageProps} />
       <Footer />

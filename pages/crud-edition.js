@@ -46,27 +46,30 @@ const CrudEdition = () => {
        </button>
        <input className = "input" type="text" placeholder="Поиск..." />
        <table className = "table">
+       <thead>
            <tr>               
                 <th>Издание</th>
-                <th>Название Книги</th>
-                <th>Автор</th>
+                <th>Издатель</th>
+                <th>Компания</th>
                 <th>Год</th>
                 <th>Действие</th>
            </tr>
+      </thead>
            {editions.map((item, index) => {
           return (
+            <tbody key={index}>
             <tr>
             <td>
-                <p key={index}>{item.title}</p>
+                <p>{item.title}</p>
               </td>
                <td>
-                <p key={index}>{item.book.original_Title.text}</p>
+                <p>{item.publisher.name}</p>
               </td>
               <td>
-                <p key={index}>{item.book.author.nickname}</p>
+                <p>{item.company.name}</p>
               </td>
               <td>
-                <p key={index}>{item.year}</p>
+                <p>{item.year}</p>
               </td>
               <td>
             <div className="crud-book_buttons">
@@ -85,6 +88,7 @@ const CrudEdition = () => {
             </div>
           </td>
             </tr>
+          </tbody>
           );
         })}
        </table>

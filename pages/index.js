@@ -11,51 +11,51 @@ import axios from "axios";
 const main = ({ data}) => {
 
   return (
-      <div class="content">
-        <div class="categories-block">
-          <div class="categories-block_item">
-              <div class="value">
+      <div className="content">
+        <div className="categories-block">
+          <div className="categories-block_item">
+              <div className="value">
                 <FontAwesomeIcon icon={faMoneyBillAlt} size="5x" />
               </div>
-              <div class="categories-block_label">Финансы</div>
+              <div className="categories-block_label">Финансы</div>
           </div>
-          <div class="categories-block_item">
-              <div class="value">
+          <div className="categories-block_item">
+              <div className="value">
                 <FontAwesomeIcon icon={faPaw} size="5x" />
               </div>
-              <div class="categories-block_label">Животные</div>
+              <div className="categories-block_label">Животные</div>
           </div>
-          <div class="categories-block_item">
-              <div class="value">
+          <div className="categories-block_item">
+              <div className="value">
                 <FontAwesomeIcon icon={faGamepad} size="5x" />
               </div>
-              <div class="categories-block_label">Игры</div>
+              <div className="categories-block_label">Игры</div>
           </div>
-          <div class="categories-block_item">
-              <div class="value">
+          <div className="categories-block_item">
+              <div className="value">
                 <FontAwesomeIcon icon={faGraduationCap} size="5x" />
               </div>
-              <div class="categories-block_label">Образование</div>
+              <div className="categories-block_label">Образование</div>
           </div>
-          <div class="categories-block_item">
-              <div class="value">
+          <div className="categories-block_item">
+              <div className="value">
                 <FontAwesomeIcon icon={faBook} size="5x" />
               </div>
-              <div class="categories-block_label">Биографии</div>
+              <div className="categories-block_label">Биографии</div>
           </div>
         </div>
-        <h2 class="main-header">
+        <h2 className="main-header">
           <FontAwesomeIcon icon={faGamepad} size="2x" />
-          <div class="cont">
+          <div className="cont">
             Игры
-            <div class="sub">Игры, девайсы и тд</div>
+            <div className="sub">Игры, девайсы и тд</div>
           </div>
         </h2>
-        <div class="main-page">
+        <div className="main-page">
           {
             data.map((value, index) => {
-             return <div class="card" key={index}>
-              <div class="image">
+             return <div className="card" key={index}>
+              <div className="image">
                 <img src= {value.img} alt="book" />
               </div>
             </div>
@@ -92,72 +92,72 @@ const main = ({ data}) => {
             </div>
           </div> */}
         </div>
-        <h2 class="main-header">
+        <h2 className="main-header">
           <FontAwesomeIcon icon={faPaw} size="2x" />
-          <div class="cont">
+          <div className="cont">
             Животные
-            <div class="sub header">Книги про животных</div>
+            <div className="sub header">Книги про животных</div>
           </div>
         </h2>
-        <div class="main-page">
+        <div className="main-page">
         {
             data.map((value, index) => {
-             return <div class="card" key={index}>
-              <div class="image">
+             return <div className="card" key={index}>
+              <div className="image">
                 <img src= {value.img} alt="book" />
               </div>
             </div>
             })
           }
         </div>
-        <h2 class="main-header">
+        <h2 className="main-header">
           <FontAwesomeIcon icon={faMoneyBillAlt} size="2x" />
-          <div class="cont">
+          <div className="cont">
             Финансы
-            <div class="sub header">Книги про финансы</div>
+            <div className="sub header">Книги про финансы</div>
           </div>
         </h2>
-        <div class="main-page">
+        <div className="main-page">
         {
             data.map((value, index) => {
-             return <div class="card" key={index}>
-              <div class="image">
+             return <div className="card" key={index}>
+              <div className="image">
                 <img src= {value.img} alt="book" />
               </div>
             </div>
             })
           }
         </div>
-        <h2 class="main-header">
+        <h2 className="main-header">
           <FontAwesomeIcon icon={faGraduationCap} size="2x" />
-          <div class="cont">
+          <div className="cont">
             Образование
-            <div class="sub header">Игры, девайсы и тд</div>
+            <div className="sub header">Игры, девайсы и тд</div>
           </div>
         </h2>
-        <div class="main-page">
+        <div className="main-page">
         {
             data.map((value, index) => {
-             return <div class="card" key={index}>
-              <div class="image">
+             return <div className="card" key={index}>
+              <div className="image">
                 <img src= {value.img} alt="book" />
               </div>
             </div>
             })
           }
         </div>
-        <h2 class="main-header">
+        <h2 className="main-header">
           <FontAwesomeIcon icon={faBook} size="2x" />
-          <div class="cont">
+          <div className="cont">
             Биографии
-            <div class="sub header">Книги про автобиографии</div>
+            <div className="sub header">Книги про автобиографии</div>
           </div>
         </h2>
-        <div class="main-page">
+        <div className="main-page">
         {
             data.map((value, index) => {
-             return <div class="card" key={index}>
-              <div class="image">
+             return <div className="card" key={index}>
+              <div className="image">
                 <img src= {value.img} alt="book" />
               </div>
             </div>

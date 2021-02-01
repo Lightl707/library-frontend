@@ -68,7 +68,7 @@ return (
         <label>Пароль</label>
         <input type="text" onChange={(e) => handleForm('password', e.target.value)}/>
       </div>
-      <button class="btn-black" onClick={() => handleClick()}>Зарегистрироваться</button>
+      <button className="btn-black" onClick={() => handleClick()}>Зарегистрироваться</button>
     </div>
   </div>
   </div>

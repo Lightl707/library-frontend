@@ -10,7 +10,7 @@ import axios from "axios";
 const CrudAuthor = () => {
 
 useEffect(() => {
-  axios.get("http://localhost:17071/edition/").then(res => {
+  axios.get("http://localhost:17071/author/").then(res => {
     setAuthors(res.data);
   })
 }, [])
@@ -55,27 +55,30 @@ useEffect(() => {
       </button>
       <input className="input" type="text" placeholder="Поиск..." />
       <table className="table">
+      <thead>
         <tr>
-          <th>Автор</th>
-          <th>Название Книги</th>
-          <th>Издание</th>
-          <th>Год</th>
+          <th>Псевдоним</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Год Рождения</th>
           <th>Действие</th>
         </tr>
+        </thead>
         {author.map((item, index) => {
           return (
+            <tbody key={index}>
             <tr>
               <td>
-                <p key={index}>{item.book.author.nickname}</p>
+                <p>{item.nickname}</p>
               </td>
               <td>
-                <p key={index}>{item.book.original_Title.text}</p>
+                <p>{item.fname.text}</p>
               </td>
                <td>
-                <p key={index}>{item.title}</p>
+                <p>{item.lname.text}</p>
               </td>
               <td>
-                <p key={index}>{item.year}</p>
+                <p>{item.year_of_birthday}</p>
               </td>
               <td>
             <div className="crud-book_buttons">
@@ -94,6 +97,7 @@ useEffect(() => {
             </div>
           </td>
             </tr>
+            </tbody>
           );
         })}
       </table>

@@ -3,14 +3,14 @@ import axios from "axios";
 
 const Popular = ({ data }) => {
   return (
-    <div class="popular">
+    <div className="popular">
       <div className="popular-title">
         <h1>Популярные книги</h1>
       </div>
       <div className="popular-items">
-        {data.map((value) => {
+        {data.map((value, index) => {
           return (
-          <div className="popular-item">
+          <div className="popular-item" key={index}>
                   <img src={value.img} alt="book" />
             <div className="popular-descr">
               <a className="name">{value.original_title.text}</a>

@@ -10,7 +10,8 @@ import EditBook from "../components/EditBook";
 const CrudBook = () => {
 
   useEffect(() => {
-    axios.get("http://localhost:17071/edition/").then(res => {
+    axios.get("http://localhost:17071/book/").then(res => {
+      console.log(res.data);
       setBooks(res.data);
     })
   }, [])
@@ -49,8 +50,9 @@ const CrudBook = () => {
         <FontAwesomeIcon icon={faPlus} size="1x" className="crud_icon" />
         Добавить Книгу
       </button>
-      <input className="input" type="text" placeholder="Поиск..." />
+      <input className="input" type="text" placeholder="Поиск..." />\
       <table className="table">
+      <thead>
         <tr>
           <th>Название</th>
           <th>Автор</th>
@@ -58,38 +60,41 @@ const CrudBook = () => {
           <th>Год</th>
           <th>Действие</th>
         </tr>
+      </thead>
         {books.map((item, index) => {
           return (
+            <tbody key={index}>
             <tr>
-               <td>
-                <p key={index}>{item.book.original_Title.text}</p>
+              <td>
+                <p>{item.original_title.text}</p>
               </td>
               <td>
-                <p key={index}>{item.book.author.nickname}</p>
-              </td>
-               <td>
-                <p key={index}>{item.title}</p>
+                <p>{item.author.nickname}</p>
               </td>
               <td>
-                <p key={index}>{item.year}</p>
+                <p></p>
               </td>
               <td>
-            <div className="crud-book_buttons">
-              <button
-                className="crud_btn-green"
-                onClick={() => setModalEditBook(true)}
-              >
-                Изменить
-              </button>
-              <button
-                className="crud_btn-red"
-                onClick={() => idModalDeleteBook(item.id)}
-              >
-                Удалить
-              </button>
-            </div>
-          </td>
+                <p>{item.description}</p>
+              </td>
+              <td>
+                <div className="crud-book_buttons">
+                  <button
+                    className="crud_btn-green"
+                    onClick={() => setModalEditBook(true)}
+                  >
+                    Изменить
+                  </button>
+                  <button
+                    className="crud_btn-red"
+                    onClick={() => idModalDeleteBook(item.id)}
+                  >
+                    Удалить
+                  </button>
+                </div>
+              </td>
             </tr>
+            </tbody>
           );
         })}
       </table>
