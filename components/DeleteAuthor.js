@@ -1,23 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTrash } from "@fortawesome/free-solid-svg-icons";
+import request from '../api/request'
+import Link from "next/link";
 
-const DeleteAuthor = ({ close }) => { 
-  useEffect(() => {
-    axios.get("http://localhost:17071/edition/").then(res => {
-      setAuthors(res.data);
-    })
-  }, [])
-  
-  const [authors, setAuthors] = useState([]);
-  
-  const handleClick = () => {
-    request.delete('/edition/{item.id}').then(res => {
-      console.log(res);
-    }).catch(error => {
-      console.log(error)
-    })
-  }
+
+
+const DeleteAuthor = ({ close, idAuthor}) => {
+
+useEffect(() => {
+  axios.get("http://localhost:17071/author/").then(res => {
+    setBooks(res.data);
+  })
+}, [])
+
+const [books, setBooks] = useState([]);
+
+const handleClick = () => {
+  request.delete(`/author/${idAuthor}`).then(res => {
+    console.log(res);
+    this.close;
+  }).catch(error => {
+    console.log(error)
+  })
+  window.location.reload()
+}
 
   return (
   <div className="modal-wrapper">
@@ -27,7 +35,7 @@ const DeleteAuthor = ({ close }) => {
     <div className="book_delete">
         <FontAwesomeIcon icon={faTrash} size="4x" />
       <h2>Удаление Автора</h2>
-        <p>Вы уверены в том, что хотите удалить Автора?</p>
+        <p>Вы уверены в том, что хотите удалить книгу?</p>
       <div className="book_delete-answers">
       <button className="book_delete-yes" onClick={() => handleClick()}>
       <FontAwesomeIcon icon={faCheck} size="1x" className="book_delete_icon"/>

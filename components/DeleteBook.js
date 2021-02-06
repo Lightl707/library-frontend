@@ -10,7 +10,7 @@ import Link from "next/link";
 const DeleteBook = ({ close, idBook}) => {
 
 useEffect(() => {
-  axios.get("http://localhost:17071/edition/").then(res => {
+  axios.get("http://localhost:17071/book/").then(res => {
     setBooks(res.data);
   })
 }, [])
@@ -18,7 +18,7 @@ useEffect(() => {
 const [books, setBooks] = useState([]);
 
 const handleClick = () => {
-  request.delete(`/edition/${idBook}`).then(res => {
+  request.delete(`/book/${idBook}`).then(res => {
     console.log(res);
     this.close;
   }).catch(error => {

@@ -15,15 +15,10 @@ const CreateBook = ({ close }) => {
       input: "",
     },
     {
-      label: "Издательство",
-      placeholder: "Издательство",
+      label: "Описание",
+      placeholder: "описание",
       input: "",
-    },
-    {
-      label: "Год",
-      placeholder: "Год",
-      input: "",
-    },
+    }
   ]);
   return (
     <div className="book-create_modal-wrapper">

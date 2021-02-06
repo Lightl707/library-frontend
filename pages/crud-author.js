@@ -28,6 +28,8 @@ useEffect(() => {
   const [showModalAuthor, setModalAuthor] = useState(false);
   const [showModalAuthorDelete, setModalAuthorDelete] = useState(false);
   const [showModalAuthorEdit, setModalAuthorEdit] = useState(false);
+  const [idAuthor, setIdAuthor] = useState(null)
+
 
   const closeModalAuthorEdit = () => {
     setModalAuthorEdit(false);
@@ -41,11 +43,17 @@ useEffect(() => {
     setModalAuthor(false);
   };
 
+  const idModalDeleteAuthor = (id) => {
+    console.log(id)
+    setIdAuthor(id);
+    setModalAuthorDelete(true);
+  };
+
   return (
     <div className="content">
       {showModalAuthor ? <CreateAuthor close={closeModalAuthor} /> : null}
       {showModalAuthorDelete ? (
-        <DeleteAuthor close={closeModalAuthorDelete} />
+        <DeleteAuthor idAuthor = {idAuthor} close={closeModalAuthorDelete} />
       ) : null}
       {showModalAuthorEdit ? <EditAuthor close={closeModalAuthorEdit} /> : null}
       <h2>Изменить/Создать Автора</h2>
@@ -57,6 +65,7 @@ useEffect(() => {
       <table className="table">
       <thead>
         <tr>
+        <th>ID</th>
           <th>Псевдоним</th>
           <th>Имя</th>
           <th>Фамилия</th>
@@ -68,6 +77,9 @@ useEffect(() => {
           return (
             <tbody key={index}>
             <tr>
+              <td>
+                <p>{item.id}</p>
+              </td>
               <td>
                 <p>{item.nickname}</p>
               </td>
@@ -90,7 +102,7 @@ useEffect(() => {
               </button>
               <button
                 className="crud_btn-red"
-                onClick={() => setModalDeleteBook(true)}
+                onClick={() => idModalDeleteAuthor(item.id)}
               >
                 Удалить
               </button>

@@ -50,14 +50,14 @@ const CrudBook = () => {
         <FontAwesomeIcon icon={faPlus} size="1x" className="crud_icon" />
         Добавить Книгу
       </button>
-      <input className="input" type="text" placeholder="Поиск..." />\
+      <input className="input" type="text" placeholder="Поиск..." />
       <table className="table">
       <thead>
         <tr>
+          <th>ID</th>
           <th>Название</th>
           <th>Автор</th>
-          <th>Издание</th>
-          <th>Год</th>
+          <th>Описание</th>
           <th>Действие</th>
         </tr>
       </thead>
@@ -65,14 +65,14 @@ const CrudBook = () => {
           return (
             <tbody key={index}>
             <tr>
+            <td>
+                <p>{item.id}</p>
+              </td>
               <td>
                 <p>{item.original_title.text}</p>
               </td>
               <td>
                 <p>{item.author.nickname}</p>
-              </td>
-              <td>
-                <p></p>
               </td>
               <td>
                 <p>{item.description}</p>
