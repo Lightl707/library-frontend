@@ -4,7 +4,7 @@ const Profile = () => (
       <div className="profile-page__user">
         <div className="profile-page__user-name">
           <img
-            src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"
+            src="img/UserIcon.png"
             alt="img"
           />
           <p>

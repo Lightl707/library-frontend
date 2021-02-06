@@ -31,7 +31,7 @@ const Header = () => {
         {authorized ? (
           <div className="profile">
             <img
-              src="https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg"
+              src="img/UserIcon.png"
               alt="user"
             />
             <div className="header_p">
