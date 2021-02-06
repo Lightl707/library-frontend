@@ -6,7 +6,6 @@ import Footer from "../components/Footer";
 import "nprogress/nprogress.css";
 import "../components/Header";
 import "../styles/all.scss";
-import Signup from "../components/signup";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
