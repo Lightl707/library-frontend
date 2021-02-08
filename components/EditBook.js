@@ -1,30 +1,37 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import request from "../api/request";
+import { fetchBookCreate } from "../api/book";
 
-const EditBook = ({ close }) => {
-  const [fields, setFields] = useState([
-    {
-      label: "Название",
-      placeholder: "Название",
-      input: "",
-    },
-    {
-      label: "Автор",
-      placeholder: "Автор",
-      input: "",
-    },
-    {
-      label: "Издательство",
-      placeholder: "Издательство",
-      input: "",
-    },
-    {
-      label: "Год",
-      placeholder: "Год",
-      input: "",
-    },
-  ]);
+const CreateBook = ({ close }) => {
+  
+  const handleForm = (type, value) => {
+    setBook({
+      ...book,
+      [type]: value,
+    });
+  };
+
+  const handleClick = () => {
+    request.patch("/book/", book).then(res => {
+      console.log(res);
+    }).catch(error => {
+      console.log(error)
+    })
+    console.log("CHECK BOOK")
+    console.log(book)
+    // window.location.reload()
+  }
+
+
+const [book, setBook] = useState({ 
+  original_title: '',
+  author: '',
+  description: '',
+  img: null
+});
+
   return (
     <div className="book-create_modal-wrapper">
       <div className="book-create">
@@ -32,26 +39,34 @@ const EditBook = ({ close }) => {
           <img src="/close.svg" alt="" />
         </div>
         <div className="book-create__content">
-          <h2>Изменить свойства книги</h2>
+          <h2>Создание Книги</h2>
           <form className="book-create_form">
-            {fields.map((field, index) => {
-              return (
-                <div className="book-create_field" key={index}>
-                  <label>{field.label}</label>
-                  <FontAwesomeIcon
+             <div className="book-create_field">
+        <label>Название книги</label>
+        <FontAwesomeIcon
                     icon={faSearch}
                     className="book-create_icon"
                   />
-                  <input
-                    className="book-create_input"
-                    type="text"
-                    placeholder={field.placeholder}
+        <input type="text" placeholder = "Название книги" className = "book-create_input" onChange={(e) => handleForm('original_title', e.target.value)} />
+      </div>
+      <div className="book-create_field">
+        <label>Автор</label>
+        <FontAwesomeIcon
+                    icon={faSearch}
+                    className="book-create_icon"
                   />
-                </div>
-              );
-            })}
-            <button className="book-create_btn-black" type="submit">
-              Изменить Свойства Книги
+        <input type="text" placeholder = "Автор должен быть в базе данных"  className = "book-create_input" onChange={(e) => handleForm('author', e.target.value)} />
+      </div>
+      <div className="book-create_field">
+        <label>Описание</label>
+        <FontAwesomeIcon
+                    icon={faSearch}
+                    className="book-create_icon" 
+                  />
+        <input type="text" className = "book-create_input"  placeholder = "Описание книги"   onChange={(e) => handleForm('description', e.target.value)} />
+      </div>
+            <button className="book-create_btn-black" onClick={() => handleClick()}>
+              Изменить Книгу
             </button>
           </form>
         </div>
@@ -60,4 +75,4 @@ const EditBook = ({ close }) => {
   );
 };
 
-export default EditBook;
+export default CreateBook;

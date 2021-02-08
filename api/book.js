@@ -23,3 +23,11 @@ export const fetchBookDelete = id =>
     .catch(err => {
       console.log(err)
     })
+
+export const fetchBookCreate = id =>
+  request
+    .post(`/book/`)
+    .then(res => res.data)
+    .catch(err => {
+      console.log(err)
+    })
