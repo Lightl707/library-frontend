@@ -69,10 +69,10 @@ const CrudBook = () => {
                 <p>{item.id}</p>
               </td>
               <td>
-        {item.original_title.text === null ? <p>{item.original_title.text}</p> : <p>Ошибка</p> }
+        {item.original_title.text != null ? <p>{item.original_title.text}</p> : <p>Ошибка</p> }
               </td>
               <td>
-                <p>{item.author.nickname}</p>
+                 {item.author.nickname != null ? <p>{item.author.nickname}</p> : <p>Автор был удалён</p> }
               </td>
               <td>
                 <p>{item.description}</p>
