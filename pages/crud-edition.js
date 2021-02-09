@@ -8,7 +8,7 @@ import axios from "axios";
 
 const CrudEdition = () => {
   useEffect(() => {
-    axios.get("http://localhost:17071/edition/").then((res) => {
+    axios.get("http://159.65.204.28:17071/edition/").then((res) => {
       setEditions(res.data);
     });
   }, []);

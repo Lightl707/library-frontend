@@ -169,7 +169,7 @@ const main = ({ data}) => {
   );
 };
 export async function getServerSideProps() { 
-  const res = await fetch("http://localhost:17071/book/");
+  const res = await fetch("http://159.65.204.28:17071/book/");
   console.log(res);
   const data = await res.json();
   return {

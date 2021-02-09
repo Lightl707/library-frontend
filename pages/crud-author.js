@@ -10,19 +10,10 @@ import axios from "axios";
 const CrudAuthor = () => {
 
 useEffect(() => {
-  axios.get("http://localhost:17071/author/").then(res => {
+  axios.get("http://159.65.204.28:17071/author/").then(res => {
     setAuthors(res.data);
   })
 }, [])
-
-  //   useEffect(async () => {
-  //   await axios
-  //     .get("http://localhost:17071/edition/")
-  //     .then((res) => {
-  //       console.log(res);
-  //       setAuthors(res.data);
-  //     });
-  // }, []);
 
   const [author, setAuthors] = useState([]);
   const [showModalAuthor, setModalAuthor] = useState(false);

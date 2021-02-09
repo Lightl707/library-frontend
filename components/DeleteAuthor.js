@@ -10,7 +10,7 @@ import Link from "next/link";
 const DeleteAuthor = ({ close, idAuthor}) => {
 
 useEffect(() => {
-  axios.get("http://localhost:17071/author/").then(res => {
+  axios.get("http://159.65.204.28:17071/author/").then(res => {
     setBooks(res.data);
   })
 }, [])
