@@ -10,7 +10,7 @@ import EditBook from "../components/EditBook";
 const CrudBook = () => {
 
   useEffect(() => {
-    axios.get("http://localhost:17071/book/").then(res => {
+    axios.get("http://159.65.204.28:17071/book/").then(res => {
       console.log(res.data);
       setBooks(res.data);
     })
